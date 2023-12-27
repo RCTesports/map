@@ -7,24 +7,25 @@
 </head>
 <body>
 
-<iframe id="embeddedMap" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+<img id="embeddedMap" src="" alt="Embedded Map" style="width: 100%; height: auto;">
 
 <script>
-// Function to fetch the content of index.html and display it in the iframe
-async function loadMap() {
+// Function to fetch a screenshot of the map and display it in the image tag
+async function loadMapScreenshot() {
     try {
-        const response = await fetch('https://rctesports.github.io/map/');
-        const htmlContent = await response.text();
+        // Replace YOUR_API_KEY with your actual API key from a screenshot service
+        const apiKey = 'YOUR_API_KEY';
+        const screenshotURL = `https://www.screenshotapi.io/api/v1/screenshot?url=${encodeURIComponent('https://rctesports.github.io/map/')}&key=${apiKey}`;
         
-        // Display the content in the iframe
-        document.getElementById('embeddedMap').srcdoc = htmlContent;
+        // Set the src attribute of the image tag to the screenshot URL
+        document.getElementById('embeddedMap').src = screenshotURL;
     } catch (error) {
-        console.error('Error loading map:', error);
+        console.error('Error loading map screenshot:', error);
     }
 }
 
-// Load the map when the page is ready
-document.addEventListener('DOMContentLoaded', loadMap);
+// Load the map screenshot when the page is ready
+document.addEventListener('DOMContentLoaded', loadMapScreenshot);
 </script>
 
 </body>

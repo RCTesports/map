@@ -15,6 +15,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Esports team data for Germany
 var teamData = {
     'Germany': { members: 2, players: ['🇩🇪 RCT GG', '🇩🇪 RCT Skorpi'] },
+    'Thailand': { members: 1, players: ['🇹🇭RCT Kaiser'] },
+    // Add more countries as needed
 };
 
 // Display team member counts directly on the map with white markers and red numbers
@@ -33,11 +35,14 @@ for (var country in teamData) {
     marker.bindPopup('<b>' + country + '</b><br>Team Members: ' + number + '<br><h3 style="font-size: 14px;">Players:</h3><ul style="list-style: none; padding: 0;">' + players.map(player => '<li>' + player + '</li>').join('') + '</ul>');
 }
 
-// Function to get LatLng coordinates for Germany
+// Function to get LatLng coordinates for a specific country (you can expand this function with more countries)
 function getCountryLatLng(country) {
     switch (country) {
         case 'Germany':
             return [51.16, 10.45];
+        case 'Thailand':
+            return [15.87, 100.99];
+        // Add more cases for other countries
         default:
             return [0, 0]; // Default to center of the map
     }

@@ -15,7 +15,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Esports team data for Germany
 var teamData = {
     'Germany': { members: 2, players: ['🇩🇪 RCT GG', '🇩🇪 RCT Skorpi'] },
-    'Thailand': { members: 1, players: ['🇹🇭RCT Kaiser'] },
+    'Thailand': { members: 1, players: ['🇹🇭 RCT Kaiser'] },
     // Add more countries as needed
 };
 

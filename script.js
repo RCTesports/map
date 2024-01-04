@@ -15,7 +15,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Esports team data for Germany
 var teamData = {
     'Germany': { members: 2, players: ['🇩🇪 RCT GG', '🇩🇪 RCT Skorpi'] },
-    'Thailand': { members: 1, players: ['🇹🇭 RCT Kaiser'] },
+    'Thailand': { members: 1, players: ['🇹🇭RCT Kaiser'] },
+    'Netherlands': { members: 1, players: ['🇳🇱 RCT Riv'] },
     // Add more countries as needed
 };
 
@@ -42,6 +43,8 @@ function getCountryLatLng(country) {
             return [51.16, 10.45];
         case 'Thailand':
             return [15.87, 100.99];
+        case 'Netherlands':
+            return [52.37, 4.90];
         // Add more cases for other countries
         default:
             return [0, 0]; // Default to center of the map
